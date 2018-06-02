@@ -28,10 +28,9 @@
             method: 'GET',
             dataType: 'html',
             success: function (data) {
-               console.log(data);
-
-               $('<img src="' + data + '" height=250>').appendTo('#pics')
-
+               $('<a href="' + data + '"  target="_blank">').append(
+                  $('<img src="' + data + '" height=250>')
+               ).appendTo('#pics')
             }
          });
       }
